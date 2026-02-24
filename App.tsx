@@ -13,9 +13,10 @@ import {
   Square, 
   Sparkles, 
   Printer,
-  Loader2
+  Loader2,
+  Home
 } from 'lucide-react';
-
+import { HOME_URL } from './constants';
 const App: React.FC = () => {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
