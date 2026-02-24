@@ -261,6 +261,13 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-slate-50 font-sans">
       <header className="green-gradient text-white p-4 shadow-md sticky top-0 z-50 no-print">
         <div className="container mx-auto flex items-center justify-between">
+          <a 
+      href={HOME_URL} 
+      className="p-2 rounded-lg hover:bg-white/10 transition-colors flex items-center gap-2 group mr-2"
+      title="Halaman Utama"
+    >
+      <Home className="w-6 h-6 group-hover:scale-110 transition-transform" />
+    </a>
           <div className="flex items-center gap-3">
             <Database className="h-8 w-8" />
             <h1 className="text-xl font-bold uppercase tracking-tight">Analisis CP-TP Insersi KBC</h1>
