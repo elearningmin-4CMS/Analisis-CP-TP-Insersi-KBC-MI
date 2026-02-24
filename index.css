@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 min-h-screen text-slate-900;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    background: radial-gradient(circle, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+  }
+  .green-primary {
+    background-color: #064e3b;
+  }
+  .green-gradient {
+    background: linear-gradient(to right, #064e3b, #4ade80, #064e3b);
+  }
+}
+
+@media print {
+  /* Sembunyikan semua elemen UI */
+  .no-print, 
+  header, 
+  footer, 
+  button, 
+  .tips-box {
+    display: none !important;
+  }
+
+  /* Reset layout untuk cetak */
+  body, html {
+    background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+  }
+
+  /* Pastikan tabel analisis memenuhi halaman */
+  #analysis-table {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .print-page { 
+    padding: 0 !important; 
+    margin: 0 !important; 
+  }
+
+  .page-break { 
+    page-break-after: always; 
+  }
+
+  /* Paksa cetak warna latar belakang */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  @page {
+    size: landscape;
+    margin: 0.5in;
+  }
+
+  /* Rapikan tabel */
+  table {
+    border-collapse: collapse !important;
+  }
+
+  th, td {
+    border: 1px solid black !important;
+  }
+
+  /* Hilangkan border khusus untuk tabel informasi di bagian atas */
+  .info-table, .info-table td {
+    border: none !important;
+  }
+}
