@@ -31,7 +31,7 @@ const App: React.FC = () => {
     fase: 'B',
     kelas: '3',
     tahunPelajaran: '2025/2026',
-    titimangsa: `Jatinagara, ${new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}`,
+    titimangsa: `Pamarican, ${new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}`,
     selectedElements: []
   });
 
@@ -464,7 +464,7 @@ const App: React.FC = () => {
                   disabled={formData.selectedElements.length === 0}
                   className={`w-full py-4 green-gradient text-white rounded-xl font-bold shadow-lg hover:opacity-90 transition-all flex items-center justify-center gap-2 active:scale-95 ${formData.selectedElements.length === 0 ? 'opacity-50 cursor-not-allowed grayscale' : ''}`}
                 >
-                  MULAI ANALISIS DENGAN GROQ AI <Sparkles size={20} />
+                  MULAI ANALISIS <Sparkles size={20} />
                 </button>
               </div>
             </div>
