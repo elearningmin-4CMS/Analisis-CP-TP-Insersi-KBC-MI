@@ -1,4 +1,4 @@
-
+export const HOME_URL = "https://admkbc.vercel.app/";
 export const MODEL_PEMBELAJARAN = [
   'LOK-R',
   'Inkuiri',
